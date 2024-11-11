@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Lista de Tareas</title>
+  </head>
+
+  <body>
+    <header><h1>Lista de Tareas</h1></header>
+    <div class="contenido">
+    
+
+      <form id="task-form">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Añadir nueva tarea"
+          required
+        />
+        <button type="submit">Añadir</button>
+      </form>
+
+      <div id="filter">
+        <button id="all">Todas</button>
+        <button id="active">Pendientes</button>
+        <button id="completed">Completadas</button>
+      </div>
+      <ul id="task-list"></ul>
+    </div>
+    <footer class="footer"><p>To-Do List. 2024</p></footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

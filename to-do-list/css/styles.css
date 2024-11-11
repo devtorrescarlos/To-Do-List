@@ -1,0 +1,146 @@
+:root {
+  --grisClaro: #f9f9f9;
+  --azul: #005b5b;
+  --rojo: rgb(244, 67, 54);
+  --gris: #555555;
+  --fuente-titulos: "Montserrat", sans-serif;
+  --fuente-principal: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+}
+.contenido {
+  min-height: calc(100vh - 140px);
+  padding: 20px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--grisClaro);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+}
+header {
+  background-color: var(--azul);
+  text-align: center;
+  font-size: 2.3rem;
+  color: var(--grisClaro);
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer {
+  height: 5rem;
+  background-color: var(--azul);
+  color: var(--grisClaro);
+  text-align: center;
+  font-size: 1.8rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  font-weight: bold;
+}
+#task-form {
+  display: flex;
+  margin: 4rem;
+}
+#task-input {
+  background-color: var(--grisClaro);
+  border: 1.5px solid hsl(180, 70%, 18%);
+  flex-grow: 1;
+  font-size: 1.8rem;
+  padding: 0.5rem;
+}
+button,
+.delete-btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: var(--azul);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.4s ease-in;
+}
+.delete-btn {
+  background-color: var(--rojo);
+}
+.delete-btn:hover {
+  background-color: rgba(244, 67, 44, 0.8);
+  transform: scale(1.02);
+}
+
+button:hover {
+  background-color: rgba(0, 91, 91, 0.8);
+  transform: scale(1.02);
+}
+ul {
+  list-style-type: none;
+}
+li {
+  display: flex;
+  align-items: center;
+  margin: 2rem 5rem;
+}
+.task-text {
+  font-family: var(--fuente-principal);
+  font-size: 1.7rem;
+  flex-grow: 1;
+  margin: 2rem 2rem;
+}
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+#filter {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Estilos para el checkbox */
+input[type="checkbox"] {
+  appearance: none; /* Eliminar el estilo predeterminado del checkbox */
+  min-width: 20px; /* Tamaño del checkbox */
+  height: 20px; /* Tamaño del checkbox */
+  border: 2px solid var(--azul); /* Borde azul */
+  border-radius: 4px; /* Esquinas redondeadas */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el checkbox */
+  margin-right: 10px; /* Espacio entre el checkbox y el texto */
+  position: relative; /* Posicionamiento relativo para el pseudo-elemento */
+}
+
+/* Estilo para el checkbox marcado */
+input[type="checkbox"]:checked {
+  background-color: var(--azul); /* Color de fondo azul */
+  border: 2px solid var(--azul); /* Borde verde */
+}
+
+/* Pseudo-elemento para el checkmark */
+input[type="checkbox"]:checked::after {
+  content: ""; /* Contenido vacío para el checkmark */
+  position: absolute; /* Posicionamiento absoluto */
+  top: 2px; /* Ajuste vertical */
+  left: 5px; /* Ajuste horizontal */
+  width: 10px; /* Ancho del checkmark */
+  height: 10px; /* Alto del checkmark */
+  background-color: white; /* Color del checkmark */
+  clip-path: polygon(0 50%, 40% 100%, 100% 0); /* Forma del checkmark */
+}
